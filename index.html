@@ -160,6 +160,185 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-从零开始搭建自己的个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">从零开始搭建自己的个人博客</a>
+    </h1>
+  
+
+        
+        
+<a href="/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2020-03-22T19:23:34.152Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="从零开始搭建自己的个人博客"><a href="#从零开始搭建自己的个人博客" class="headerlink" title="从零开始搭建自己的个人博客"></a>从零开始搭建自己的个人博客</h1><h3 id="1、简介："><a href="#1、简介：" class="headerlink" title="1、简介："></a>1、简介：</h3><ol>
+<li>利用node.js安装hexo博客框架</li>
+<li>基于macOS</li>
+<li>利用免费的GitHub pages</li>
+<li>静态页面</li>
+</ol>
+<h3 id="2、安装Node-js"><a href="#2、安装Node-js" class="headerlink" title="2、安装Node.js:"></a>2、安装Node.js:</h3><ol>
+<li>进入<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">官网</a>，并下载安装；</li>
+</ol>
+<p><img src="/Users/songlaoshikepila/Downloads/nodejs.png" alt="image-20200323012406535"></p>
+<ol start="2">
+<li>其中包含两个组件，一个是node.js本身，另外一个是npm(node package manager)包管理器</li>
+</ol>
+<p><img src="https://images2015.cnblogs.com/blog/343184/201601/343184-20160111230107944-321995714.png" alt="img"></p>
+<ol start="3">
+<li>安装完成后，打开<strong>终端</strong>检查一下  <ul>
+<li>先利用命令<code>sudo su</code>切换到root用户</li>
+<li>通过<code>node -v</code>和<code>npm -v</code>来检查是否安装成功![image-20200323014924630](/Users/songlaoshikepila/Library/Application Support/typora-user-images/image-20200323014924630.png)</li>
+</ul>
+</li>
+</ol>
+<h3 id="3、安装Hexo博客框架"><a href="#3、安装Hexo博客框架" class="headerlink" title="3、安装Hexo博客框架"></a>3、安装Hexo博客框架</h3><ol>
+<li><p>利用node.js的npm安装阿里淘宝的<a href="国内阿里的镜像，更加快速">^cnpm</a></p>
+<blockquote>
+<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+</blockquote>
+</li>
+</ol>
+<ol start="2">
+<li><p>输入<code>cnpm -v</code>检查是否安装</p>
+<p>![image-20200323020718986](/Users/songlaoshikepila/Library/Application Support/typora-user-images/image-20200323020718986.png)</p>
+</li>
+<li><p>利用<code>cnpm</code>安装hexo博客,并检查</p>
+<blockquote>
+<p><code>cnpm install -g hexo-cil</code></p>
+<p><code>hexo -v</code></p>
+</blockquote>
+</li>
+</ol>
+<img src="/Users/songlaoshikepila/Library/Application Support/typora-user-images/image-20200323021625470.png" alt="image-20200323021625470" style="zoom:50%;" />
+
+<h3 id="4、利用安装好的Hexo搭建博客"><a href="#4、利用安装好的Hexo搭建博客" class="headerlink" title="4、利用安装好的Hexo搭建博客"></a>4、利用安装好的Hexo搭建博客</h3><ol>
+<li><p>首先建立新的文件夹以存放博客源文件  </p>
+<blockquote>
+<p><code>pwd</code>：查看当前的文件路径</p>
+</blockquote>
+<blockquote>
+<p><code>mkdir blog</code>:建立文件名为blog的文件夹</p>
+</blockquote>
+<blockquote>
+<p><code>cd blog</code>:进入文件blog</p>
+</blockquote>
+</li>
+<li><p>使用hexo生成博客</p>
+<blockquote>
+<p><code>sudo hexo init</code>:初始化一个博客</p>
+</blockquote>
+</li>
+</ol>
+<p>可以进入文件夹查看生成的hexo基本框架的内容</p>
+<img src="/Users/songlaoshikepila/Library/Application Support/typora-user-images/image-20200323022411313.png" alt="image-20200323022411313" style="zoom:50%;" />
+
+<h3 id="5、启动并使用博客"><a href="#5、启动并使用博客" class="headerlink" title="5、启动并使用博客"></a>5、启动并使用博客</h3><ol>
+<li><p>本地启动博客</p>
+<blockquote>
+<p><code>hexo s</code>:网站将以<code>http://localhost:4000</code>默认运行，打开浏览器并输入网址即可查看；</p>
+<p><code>hexo n &quot;我的第一篇博客&quot;</code>：新建一个博客文章</p>
+<p><code>cd soure/_posts/</code>:进入第一篇文章的地址，打开文件:<strong>我的第一篇博客.md</strong>，可以通过编辑器读写</p>
+</blockquote>
+</li>
+<li><p>将博客本地生成到网址中</p>
+<blockquote>
+<p><code>hexo g</code></p>
+<p><code>hexo s</code>:可再此打开本地网址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>进行查看生成的第一篇博客</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="6、将博客部署到GitHub上公开使用"><a href="#6、将博客部署到GitHub上公开使用" class="headerlink" title="6、将博客部署到GitHub上公开使用"></a>6、将博客部署到GitHub上公开使用</h3><ol>
+<li>登陆GitHub并创建一个仓库,<strong>用户部署个人博客的GitHub仓库的命名必须符合特定要求</strong>，即你的GitHub名字加上<code>.github.io</code>,命名完成后创建仓库</li>
+</ol>
+<img src="/Users/songlaoshikepila/Library/Application Support/typora-user-images/image-20200323025326641.png" alt="image-20200323025326641" style="zoom:50%;" />
+
+<ol start="2">
+<li><p>打开<strong>终端</strong>，安装git插件</p>
+<blockquote>
+<p><code>cd blog</code>:进入<code>blog</code>文件夹</p>
+<p><code>cnpm install --save hexo-deployer-git</code>:安装git部署的插件</p>
+</blockquote>
+</li>
+<li><p>配置文件</p>
+<ul>
+<li><p>打开<code>_config.yml</code></p>
+</li>
+<li><p>到文件最底部<code># Deloyment</code>下进行如下配置,并保存</p>
+<blockquote>
+<p><code>type:git</code></p>
+<p><code>repo:https://github.com/xxx/xxx.github.io.git</code>:xxx是GitHub的名字，这个地址也就是刚创建仓库的地址</p>
+<p><code>branch:master</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>在<strong>终端</strong>中部署</p>
+<blockquote>
+<p><code>hexo d</code>:部署</p>
+<p>中间需要输入GitHub的账号密码</p>
+</blockquote>
+</li>
+<li><p>访问部署成功的博客</p>
+<ul>
+<li>在浏览器中输入网址<a href="https://xxx.githun.io" target="_blank" rel="noopener">https://xxx.githun.io</a>即可进入你创建的博客，xxx是GitHub的名字</li>
+<li>第一次需要多刷新几次</li>
+<li>这个博客即创建成功</li>
+</ul>
+</li>
+</ol>
+<h6 id="本片文章来源于B站-av44544186，仅个人学习使用。"><a href="#本片文章来源于B站-av44544186，仅个人学习使用。" class="headerlink" title="本片文章来源于B站 av44544186，仅个人学习使用。"></a>本片文章来源于B站 av44544186，仅个人学习使用。</h6>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

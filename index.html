@@ -278,10 +278,12 @@
 <ul>
 <li><p>打开<code>_config.yml</code></p>
 </li>
-<li><p>到文件最底部<code># Deloyment</code>下进行如下配置,并保存<br> <code>type:git</code></p>
+<li><p>到文件最底部<code># Deloyment</code>下进行如下配置,并保存</p>
 <blockquote>
-<p><code>repo:https://github.com/xxx/xxx.github.io.git</code>:xxx是GitHub的名字，这个地址也就是刚创建仓库的地址<br><code>branch:master</code></p>
+<p><code>type: git</code><br><code>repo: https://github.com/xxx/xxx.github.io.git</code>:xxx是GitHub的名字，这个地址也就是刚创建仓库的地址<br><code>branch: master</code></p>
 </blockquote>
+</li>
+<li><p>注意：<code>:</code>后面需要加上<code></code>空格！</p>
 </li>
 </ul>
 </li>
@@ -296,6 +298,8 @@
 <li>在浏览器中输入网址<a href="https://xxx.githun.io" target="_blank" rel="noopener">https://xxx.githun.io</a>即可进入你创建的博客，xxx是GitHub的名字</li>
 <li>第一次需要多刷新几次</li>
 <li>这个博客即创建成功</li>
+<li>下次使用上传文件时需要使用<code>sudo su</code>登录root用户，否则会出现如下错误ERROR；<br><img src="https://user-images.githubusercontent.com/56063755/77818596-a16d5800-710e-11ea-8aed-41a08b9d0e16.jpg" alt="error"></li>
+<li>详细请看hexo官方文档<code>https://hexo.io/docs/</code></li>
 </ul>
 </li>
 </ol>

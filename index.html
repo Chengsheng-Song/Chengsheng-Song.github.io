@@ -188,122 +188,8 @@
 <li>静态页面</li>
 </ol>
 <h3 id="2、安装Node-js"><a href="#2、安装Node-js" class="headerlink" title="2、安装Node.js"></a>2、安装Node.js</h3><ol>
-<li>进入<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">官网</a>，并下载安装；</li>
-</ol>
-<img width="1101" alt="image-20200323012406535" src="https://user-images.githubusercontent.com/56063755/77290162-88cbff00-6d16-11ea-8299-f2f28c1e2116.png">
-
-<ol start="2">
-<li>其中包含两个组件，一个是node.js本身，另外一个是npm(node package manager)包管理器</li>
-</ol>
-<img width="620" alt="image-20200323013206338" src="https://user-images.githubusercontent.com/56063755/77290170-8ec1e000-6d16-11ea-9119-84ce49f3f1ec.png">
-
-<ol start="3">
-<li>安装完成后，打开<strong>终端</strong>检查一下  <ul>
-<li>先利用命令<code>sudo su</code>切换到root用户</li>
-<li>通过<code>node -v</code>和<code>npm -v</code>来检查是否安装成功<img width="516" alt="image-20200323014924630" src="https://user-images.githubusercontent.com/56063755/77290172-908ba380-6d16-11ea-8a68-8c3b38aed6fc.png"></li>
-</ul>
-</li>
-</ol>
-<h3 id="3、安装Hexo博客框架"><a href="#3、安装Hexo博客框架" class="headerlink" title="3、安装Hexo博客框架"></a>3、安装Hexo博客框架</h3><ol>
-<li><p>利用node.js的npm安装阿里淘宝的<a href="国内阿里的镜像，更加快速">^cnpm</a></p>
-<blockquote>
-<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
-</blockquote>
-</li>
-</ol>
-<ol start="2">
-<li><p>输入<code>cnpm -v</code>检查是否安装</p>
-<img width="506" alt="image-20200323020718986" src="https://user-images.githubusercontent.com/56063755/77290928-3390ed00-6d18-11ea-907c-dbcb3db88546.png">
-
-
-</li>
-</ol>
-<ol start="3">
-<li><p>利用<code>cnpm</code>安装hexo博客,并检查</p>
-<blockquote>
-<p><code>cnpm install -g hexo-cil</code></p>
-<p><code>hexo -v</code></p>
-</blockquote>
-</li>
-</ol>
-<img width="388" alt="image-20200323021625470" src="https://user-images.githubusercontent.com/56063755/77291348-08f36400-6d19-11ea-9348-972ba9f9d4eb.png">
-
-<h3 id="4、利用安装好的Hexo搭建博客"><a href="#4、利用安装好的Hexo搭建博客" class="headerlink" title="4、利用安装好的Hexo搭建博客"></a>4、利用安装好的Hexo搭建博客</h3><ol>
-<li><p>首先建立新的文件夹以存放博客源文件  </p>
-<blockquote>
-<p><code>pwd</code>：查看当前的文件路径</p>
-</blockquote>
-<blockquote>
-<p><code>mkdir blog</code>:建立文件名为blog的文件夹</p>
-</blockquote>
-<blockquote>
-<p><code>cd blog</code>:进入文件blog</p>
-</blockquote>
-</li>
-<li><p>使用hexo生成博客</p>
-<blockquote>
-<p><code>sudo hexo init</code>:初始化一个博客</p>
-</blockquote>
-</li>
-</ol>
-<p>可以进入文件夹查看生成的hexo基本框架的内容</p>
-<p><img src="https://user-images.githubusercontent.com/56063755/77292524-65f01980-6d1b-11ea-849d-6d5e9d72b7c4.jpg" alt="image-20200323022411313"></p>
-<h3 id="5、启动并使用博客"><a href="#5、启动并使用博客" class="headerlink" title="5、启动并使用博客"></a>5、启动并使用博客</h3><ol>
-<li><p>本地启动博客</p>
-<blockquote>
-<p><code>hexo s</code>:网站将以<code>http://localhost:4000</code>默认运行，打开浏览器并输入网址即可查看；</p>
-<p><code>hexo n &quot;我的第一篇博客&quot;</code>：新建一个博客文章</p>
-<p><code>cd soure/_posts/</code>:进入第一篇文章的地址，打开文件:<strong>我的第一篇博客.md</strong>，可以通过编辑器读写</p>
-</blockquote>
-</li>
-<li><p>将博客本地生成到网址中</p>
-<blockquote>
-<p><code>hexo g</code></p>
-<p><code>hexo s</code>:可再此打开本地网址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>进行查看生成的第一篇博客</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="6、将博客部署到GitHub上公开使用"><a href="#6、将博客部署到GitHub上公开使用" class="headerlink" title="6、将博客部署到GitHub上公开使用"></a>6、将博客部署到GitHub上公开使用</h3><ol>
-<li>登陆GitHub并创建一个仓库,<strong>用户部署个人博客的GitHub仓库的命名必须符合特定要求</strong>，即你的GitHub名字加上<code>.github.io</code>,命名完成后创建仓库</li>
-</ol>
-<p><img src="https://user-images.githubusercontent.com/56063755/77292631-a5b70100-6d1b-11ea-8f33-a75c51e0b42b.jpg" alt="image-20200323025326641"></p>
-<ol start="2">
-<li><p>打开<strong>终端</strong>，安装git插件</p>
-<blockquote>
-<p><code>cd blog</code>:进入<code>blog</code>文件夹</p>
-<p><code>cnpm install --save hexo-deployer-git</code>:安装git部署的插件</p>
-</blockquote>
-</li>
-<li><p>配置文件</p>
-<ul>
-<li><p>打开<code>_config.yml</code></p>
-</li>
-<li><p>到文件最底部<code># Deloyment</code>下进行如下配置,并保存</p>
-<blockquote>
-<p><code>type: git</code><br><code>repo: https://github.com/xxx/xxx.github.io.git</code>:xxx是GitHub的名字，这个地址也就是刚创建仓库的地址<br><code>branch: master</code></p>
-</blockquote>
-</li>
-<li><p>注意：<code>:</code>后面需要加上<code></code>空格！</p>
-</li>
-</ul>
-</li>
-<li><p>在<strong>终端</strong>中部署</p>
-<blockquote>
-<p><code>hexo d</code>:部署</p>
-<p>中间需要输入GitHub的账号密码</p>
-</blockquote>
-</li>
-<li><p>访问部署成功的博客</p>
-<ul>
-<li>在浏览器中输入网址<a href="https://xxx.githun.io" target="_blank" rel="noopener">https://xxx.githun.io</a>即可进入你创建的博客，xxx是GitHub的名字</li>
-<li>第一次需要多刷新几次</li>
-<li>这个博客即创建成功</li>
-<li>下次使用上传文件时需要使用<code>sudo su</code>登录root用户，否则会出现如下错误ERROR；<br><img src="https://user-images.githubusercontent.com/56063755/77818596-a16d5800-710e-11ea-8aed-41a08b9d0e16.jpg" alt="error"></li>
-<li>详细请看hexo官方文档<code>https://hexo.io/docs/</code></li>
-</ul>
-</li>
-</ol>
-<h6 id="本片文章来源于B站-av44544186，仅个人学习使用。"><a href="#本片文章来源于B站-av44544186，仅个人学习使用。" class="headerlink" title="本片文章来源于B站 av44544186，仅个人学习使用。"></a>本片文章来源于B站 av44544186，仅个人学习使用。</h6>
+<li><p>进入<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">官网</a>，并下载安装；</p>
+        
       
 
       
@@ -368,9 +254,7 @@
       
         <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>这是关于我自己的生活、学习的博客空间。<br>将会记录我以后的点点滴滴。</p>
 <hr>
-<h2 id="寄语"><a href="#寄语" class="headerlink" title="寄语"></a>寄语</h2><p>不再傻逼。</p>
-<hr>
-
+        
       
 
       
@@ -437,16 +321,7 @@
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        
       
 
       
